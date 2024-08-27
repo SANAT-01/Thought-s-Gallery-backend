@@ -11,6 +11,14 @@ async function getAll() {
   return storedData.events;
 }
 
+async function getAllUsers() {
+  const storedData = await readData();
+  if (!storedData.users) {
+    throw new NotFoundError("Could not find any events.");
+  }
+  return storedData.users;
+}
+
 async function get(id) {
   const storedData = await readData();
   console.log(storedData);
@@ -60,3 +68,4 @@ exports.get = get;
 exports.add = add;
 exports.replace = replace;
 exports.remove = remove;
+exports.getAllUsers = getAllUsers;
