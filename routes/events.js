@@ -1,6 +1,13 @@
 const express = require("express");
 
-const { getAll, get, add, replace, remove } = require("../data/event");
+const {
+  getAll,
+  get,
+  add,
+  replace,
+  remove,
+  getAllUsers,
+} = require("../data/event");
 const { checkAuth } = require("../util/auth");
 const {
   isValidText,
@@ -15,6 +22,16 @@ router.get("/", async (req, res, next) => {
   try {
     const events = await getAll();
     res.json({ events: events });
+  } catch (error) {
+    next(error);
+  }
+});
+
+router.get("/users", async (req, res, next) => {
+  // console.log(req.token);
+  try {
+    const user = await getAllUsers();
+    res.json({ user: user });
   } catch (error) {
     next(error);
   }
