@@ -4,10 +4,12 @@ const {
   getAll,
   get,
   add,
-  replace,
-  remove,
-  getAllUsers,
+  removeEvent,
+  replaceEvents,
 } = require("../data/event");
+
+const { removeUser, getAllUsers, replaceUser } = require("../data/user");
+
 const { checkAuth } = require("../util/auth");
 const {
   isValidText,
@@ -114,8 +116,27 @@ router.patch("/:id", async (req, res, next) => {
   }
 
   try {
-    await replace(req.params.id, data);
+    await replaceEvents(req.params.id, data);
     res.json({ message: "Event updated.", event: data });
+  } catch (error) {
+    next(error);
+  }
+});
+
+router.patch("/user/:id", async (req, res, next) => {
+  const data = req.body;
+  let errors = {};
+  if (Object.keys(errors).length > 0) {
+    return res.status(422).json({
+      message: "Updating the event failed due to validation errors.",
+      errors,
+    });
+  }
+
+  try {
+    await replaceUser(req.params.id, data);
+    console.log("User Updated");
+    res.json({ message: "User updated.", user: data });
   } catch (error) {
     next(error);
   }
@@ -123,7 +144,16 @@ router.patch("/:id", async (req, res, next) => {
 
 router.delete("/:id", async (req, res, next) => {
   try {
-    await remove(req.params.id);
+    await removeEvent(req.params.id);
+    res.json({ message: "Event deleted." });
+  } catch (error) {
+    next(error);
+  }
+});
+
+router.delete("users/:id", async (req, res, next) => {
+  try {
+    await removeUser(req.params.id);
     res.json({ message: "Event deleted." });
   } catch (error) {
     next(error);

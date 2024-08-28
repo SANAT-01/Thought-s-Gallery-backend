@@ -1,44 +1,44 @@
 {
   "events": [
     {
+      "text": "be like homelander",
+      "author": "homelander",
+      "date": "2024-08-27T13:10:14.471Z",
+      "likes": 20,
+      "dislikes": 12,
+      "id": "eb6a8f0b-d109-4180-a79b-8b1ec5d5ad73"
+    },
+    {
       "text": "Never be upset for small reason !!",
       "author": "Sanattudu28",
       "date": "2024-08-27T12:22:14.220Z",
-      "likes": 0,
+      "likes": 2,
       "dislikes": 0,
       "id": "e4fda89a-896e-4051-b25b-cb01d515b7fa"
     },
     {
-      "text": "Be kind to everyone ",
+      "text": "Be kind to everyone.",
       "author": "Sanat.Tudu",
       "date": "2024-08-27T12:21:34.758Z",
-      "likes": 0,
-      "dislikes": 0,
+      "likes": 19,
+      "dislikes": 1,
       "id": "fd4a7c8a-42ee-4c04-91c1-c07699009e99"
     },
     {
       "text": "Always be positive ;)",
       "author": "Mr. ABC",
       "date": "2024-08-27T09:11:09.517Z",
-      "likes": 0,
-      "dislikes": 0,
+      "likes": 34,
+      "dislikes": 3,
       "id": "7259af1a-a52b-4733-9357-24ce7d580ed6"
     },
     {
       "text": "Honesty is our best policy",
-      "author": "Mr. ABC",
+      "author": "Sanat.Tudu",
       "date": "2024-08-08T09:16:48.877Z",
       "likes": 21,
       "dislikes": 1,
       "id": "c1668690-b243-4a72-aa67-1a476d1d8d6f"
-    },
-    {
-      "id": "1",
-      "text": "Enjoy your own company because at the end of the day, you are on your own!!!",
-      "author": "Mr. ABC",
-      "date": "2024-05-20",
-      "likes": 20,
-      "dislikes": 10
     },
     {
       "id": "2",
@@ -119,7 +119,7 @@
       "password": "$2a$12$N0q.N1/srLHmZI0rpcqm8.nDE6/DHSmPM9yYKIB6EgfU6YXraMaWu",
       "img": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png",
       "name": "Sanat.Tudu",
-      "bio": "",
+      "bio": "Software Developer at Winjit Pvt Ltd.",
       "id": "e1387708-c11a-4a2b-9fbf-eb8e4e61c598"
     },
     {
@@ -127,8 +127,24 @@
       "password": "$2a$12$nH5qHZdlEpE8TR9cb6izc.TDWDrSIKGgZmR9U9.VJ/Pl9tKoHMYXy",
       "img": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png",
       "name": "Sanattudu28",
-      "bio": "",
+      "bio": "Just a normal user",
       "id": "10b916c5-aec1-4211-aec3-62068f2a8e7f"
+    },
+    {
+      "email": "homelander@vaught.com",
+      "password": "$2a$12$DFFAaLLoQaq.bImTQMuOUOtIFisXvr/tAqutuvsexamA1/C7RD03u",
+      "img": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png",
+      "name": "homelander",
+      "bio": "I am Stronger I am Better .",
+      "id": "301faf67-2234-4752-9c86-9e173156ae6d"
+    },
+    {
+      "email": "abc@gmail.com",
+      "password": "$2a$12$5jvyqRR44NnTe12mMI45pORykCwpTk9xAaWl7lzpdmY7Cz5R6AVHW",
+      "img": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png",
+      "name": "abc",
+      "bio": "",
+      "id": "71381d45-5d3b-4e7b-876f-c3da0905dcc8"
     }
   ]
 }
