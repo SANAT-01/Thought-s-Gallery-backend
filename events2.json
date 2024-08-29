@@ -1,44 +1,44 @@
 {
   "events": [
     {
+      "text": "be like homelander",
+      "author": "homelander",
+      "date": "2024-08-27T13:10:14.471Z",
+      "likes": 20,
+      "dislikes": 12,
+      "id": "eb6a8f0b-d109-4180-a79b-8b1ec5d5ad73"
+    },
+    {
       "text": "Never be upset for small reason !!",
       "author": "Sanattudu28",
       "date": "2024-08-27T12:22:14.220Z",
-      "likes": 0,
+      "likes": 2,
       "dislikes": 0,
       "id": "e4fda89a-896e-4051-b25b-cb01d515b7fa"
     },
     {
-      "text": "Be kind to everyone ",
+      "text": "Be kind to everyone.",
       "author": "Sanat.Tudu",
       "date": "2024-08-27T12:21:34.758Z",
-      "likes": 0,
-      "dislikes": 0,
+      "likes": 19,
+      "dislikes": 1,
       "id": "fd4a7c8a-42ee-4c04-91c1-c07699009e99"
     },
     {
       "text": "Always be positive ;)",
       "author": "Mr. ABC",
       "date": "2024-08-27T09:11:09.517Z",
-      "likes": 0,
-      "dislikes": 0,
+      "likes": 34,
+      "dislikes": 3,
       "id": "7259af1a-a52b-4733-9357-24ce7d580ed6"
     },
     {
       "text": "Honesty is our best policy",
-      "author": "Mr. ABC",
+      "author": "Sanat.Tudu",
       "date": "2024-08-08T09:16:48.877Z",
       "likes": 21,
       "dislikes": 1,
       "id": "c1668690-b243-4a72-aa67-1a476d1d8d6f"
-    },
-    {
-      "id": "1",
-      "text": "Enjoy your own company because at the end of the day, you are on your own!!!",
-      "author": "Mr. ABC",
-      "date": "2024-05-20",
-      "likes": 20,
-      "dislikes": 10
     },
     {
       "id": "2",
@@ -117,18 +117,34 @@
     {
       "email": "Sanat.Tudu@winjit.com",
       "password": "$2a$12$N0q.N1/srLHmZI0rpcqm8.nDE6/DHSmPM9yYKIB6EgfU6YXraMaWu",
-      "img": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png",
+      "img": "https://th.bing.com/th/id/OIP.Ab0QsfWQc4MvKr2rYmtSWgHaG1?rs=1&pid=ImgDetMain",
       "name": "Sanat.Tudu",
-      "bio": "",
+      "bio": "A Software Developer at Winjit Pvt Ltd.",
       "id": "e1387708-c11a-4a2b-9fbf-eb8e4e61c598"
     },
     {
       "email": "Sanattudu28@gmail.com",
       "password": "$2a$12$nH5qHZdlEpE8TR9cb6izc.TDWDrSIKGgZmR9U9.VJ/Pl9tKoHMYXy",
-      "img": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png",
+      "img": "https://www.pngall.com/wp-content/uploads/5/Profile-Transparent.png",
       "name": "Sanattudu28",
-      "bio": "",
+      "bio": "Just a normal user",
       "id": "10b916c5-aec1-4211-aec3-62068f2a8e7f"
+    },
+    {
+      "email": "xyz@gmail.com",
+      "password": "$2a$12$FlE/SXhYtdwymJHEIBNSpeZ3/dxnij7hSEMKDsHMBloiyHR9y7dKa",
+      "img": "https://tse3.mm.bing.net/th?q=Human+Profile+Sketches&pid=ImgDet&mkt=en-IN&cc=IN&setlang=en&adlt=strict&w=120&h=123&c=7&dpr=1.3",
+      "name": "xyz",
+      "bio": "Just a normal user",
+      "id": "d50e88c1-59c6-401b-b51f-aa83232ed054"
+    },
+    {
+      "email": "homelander@vaught.com",
+      "password": "$2a$12$sfzm6o4hSkhF6LyXtqQLReifCumds4wrDhyVCBnuK4cUZUzYup2DK",
+      "img": "https://th.bing.com/th/id/OIP.audMX4ZGbvT2_GJTx2c4GgAAAA?rs=1&pid=ImgDetMain",
+      "name": "homelander",
+      "bio": "My Bio",
+      "id": "41ed85bf-b4d0-42f9-9489-d33cfe7d8d37"
     }
   ]
 }

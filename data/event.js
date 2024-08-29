@@ -1,27 +1,19 @@
 const { v4: generateId } = require("uuid");
 
 const { NotFoundError } = require("../util/errors");
-const { readData, writeData } = require("./util");
+const { readDataEvents, writeDataEvents } = require("./util");
 
 async function getAll() {
-  const storedData = await readData();
+  const storedData = await readDataEvents();
   if (!storedData.events) {
     throw new NotFoundError("Could not find any events.");
   }
   return storedData.events;
 }
 
-async function getAllUsers() {
-  const storedData = await readData();
-  if (!storedData.users) {
-    throw new NotFoundError("Could not find any events.");
-  }
-  return storedData.users;
-}
-
 async function get(id) {
-  const storedData = await readData();
-  console.log(storedData);
+  const storedData = await readDataEvents();
+  // console.log(storedData);
   if (!storedData.events || storedData.events.length === 0) {
     throw new NotFoundError("Could not find any events.");
   }
@@ -35,14 +27,14 @@ async function get(id) {
 }
 
 async function add(data) {
-  const storedData = await readData();
-  console.log(storedData);
+  const storedData = await readDataEvents();
+  // console.log(storedData);
   storedData.events.unshift({ ...data, id: generateId() });
-  await writeData(storedData);
+  await writeDataEvents(storedData);
 }
 
-async function replace(id, data) {
-  const storedData = await readData();
+async function replaceEvents(id, data) {
+  const storedData = await readDataEvents();
   if (!storedData.events || storedData.events.length === 0) {
     throw new NotFoundError("Could not find any events.");
   }
@@ -54,18 +46,17 @@ async function replace(id, data) {
 
   storedData.events[index] = { ...data, id };
 
-  await writeData(storedData);
+  await writeDataEvents(storedData);
 }
 
-async function remove(id) {
-  const storedData = await readData();
+async function removeEvent(id) {
+  const storedData = await readDataEvents();
   const updatedData = storedData.events.filter((ev) => ev.id !== id);
-  await writeData({ ...storedData, events: updatedData });
+  await writeDataEvents({ ...storedData, events: updatedData });
 }
 
 exports.getAll = getAll;
 exports.get = get;
 exports.add = add;
-exports.replace = replace;
-exports.remove = remove;
-exports.getAllUsers = getAllUsers;
+exports.replaceEvents = replaceEvents;
+exports.removeEvent = removeEvent;
