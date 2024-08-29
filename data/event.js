@@ -13,7 +13,7 @@ async function getAll() {
 
 async function get(id) {
   const storedData = await readDataEvents();
-  console.log(storedData);
+  // console.log(storedData);
   if (!storedData.events || storedData.events.length === 0) {
     throw new NotFoundError("Could not find any events.");
   }
@@ -28,7 +28,7 @@ async function get(id) {
 
 async function add(data) {
   const storedData = await readDataEvents();
-  console.log(storedData);
+  // console.log(storedData);
   storedData.events.unshift({ ...data, id: generateId() });
   await writeDataEvents(storedData);
 }

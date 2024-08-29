@@ -23,14 +23,15 @@ async function getAllUsers() {
   return storedData.users;
 }
 async function get(email) {
+  console.log("inside get user method");
   const storedData = await readDataUsers();
-  // console.log(storedData); // returning all the event.json datas
+  console.log(storedData); // returning all the event.json datas
   if (!storedData.users || storedData.users.length === 0) {
     throw new NotFoundError("Could not find any users.");
   }
 
   const user = storedData.users.find((ev) => ev.email === email);
-  console.log(user);
+  // console.log(user);
   if (!user) {
     throw new NotFoundError("Could not find user for email " + email);
   }
@@ -63,5 +64,5 @@ async function removeUser(id) {
 exports.removeUser = removeUser;
 exports.getAllUsers = getAllUsers;
 exports.replaceUser = replaceUser;
-exports.add = add;
-exports.get = get;
+exports.addUser = add;
+exports.getUser = get;

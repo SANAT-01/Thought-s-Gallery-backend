@@ -3,7 +3,7 @@ const express = require("express");
 
 const eventRoutes = require("./routes/events");
 const authRoutes = require("./routes/auth");
-
+const fabs = require("./routes/fav");
 const app = express();
 
 app.use(bodyParser.json());
@@ -15,7 +15,7 @@ app.use((req, res, next) => {
 });
 
 app.use(authRoutes);
-
+app.use("/fav", fabs);
 app.use("/events", eventRoutes);
 
 app.use((error, req, res, next) => {

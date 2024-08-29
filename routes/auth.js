@@ -1,5 +1,5 @@
 const express = require("express");
-const { add, get } = require("../data/user");
+const { addUser, getUser } = require("../data/user");
 const { createJSONToken, isValidPassword } = require("../util/auth");
 const { isValidEmail, isValidText } = require("../util/validation");
 
@@ -7,14 +7,14 @@ const router = express.Router();
 
 router.post("/signup", async (req, res, next) => {
   const data = req.body;
-  console.log(data);
+  // console.log(data);
   let errors = {};
 
   if (!isValidEmail(data.email)) {
     errors.email = "Invalid email.";
   } else {
     try {
-      const existingUser = await get(data.email);
+      const existingUser = await getUser(data.email);
       if (existingUser) {
         errors.email = "Email exists already.";
       }
@@ -33,8 +33,8 @@ router.post("/signup", async (req, res, next) => {
   }
 
   try {
-    const createdUser = await add(data);
-    console.log(createdUser);
+    const createdUser = await addUser(data);
+    // console.log(createdUser);
     const authToken = createJSONToken(createdUser.email);
     res
       .status(201)
@@ -47,14 +47,16 @@ router.post("/signup", async (req, res, next) => {
 router.post("/login", async (req, res) => {
   const email = req.body.email;
   const password = req.body.password;
-
+  console.log(email);
   let user;
   try {
-    user = await get(email);
+    console.log("finding user email");
+    user = await getUser(email);
+    console.log("found user email");
   } catch (error) {
     return res.status(401).json({ message: "Authentication failed." });
   }
-
+  console.log("user found");
   const pwIsValid = await isValidPassword(password, user.password);
   if (!pwIsValid) {
     return res.status(422).json({

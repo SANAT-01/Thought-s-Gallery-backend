@@ -20,7 +20,19 @@ async function writeDataUsers(data) {
   await fs.writeFile("storage/users.json", JSON.stringify(data));
 }
 
+async function readDataFav() {
+  const data = await fs.readFile("storage/fav.json", "utf8");
+  console.log(data.fabs);
+  return JSON.parse(data);
+}
+
+async function writeDataFav(data) {
+  await fs.writeFile("storage/fav.json", JSON.stringify(data));
+}
+
 exports.readDataEvents = readDataEvents;
 exports.writeDataEvents = writeDataEvents;
 exports.readDataUsers = readDataUsers;
 exports.writeDataUsers = writeDataUsers;
+exports.readDataFav = readDataFav;
+exports.writeDataFav = writeDataFav;
